@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Налаштування поведінки в'юпорта -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Lesson 22</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h2>Домашки JAVASCRIPT (Я у мами хакер)</h2>
+      </header>
+      <main class="page">
+        <article>
+          <h2>Домашка JS (Оператори JAVASCRIPT)</h2>
+          <p>
+            <span>// Варіант №1</span></br> console.log("35" + -"22"); </br></br> <mark>не вірно, оба операнда
+            -String, та результат теж буде String: 35-22.</mark>
+          </p>
+          <p>
+            <span>// Варіант №2</span></br> console.log("35" * "22"); </br></br> <mark>вірно, (*) міняє тип на number та повертає 770.</mark>
+          </p>
+          <p>
+            <span>// Варіант №3</span></br> console.log('558' > 22++); </br></br> <mark>не вірно, не вірний
+            синтаксис, щоб працювало треба видалити інкремент: console.log("558"
+            > 22);</mark>
+          </p>
+          <p><span>// Варіант №4</span></br>
+let usersCounter = 0;</br>
+let newUsers = usersCounter++;</br>
+console.log(newUsers);</br></br> <mark>не вірно, щоб повернути 1, інкремент повинен мати префіксовий запис:</br>
+let usersCounter = 0;</br>
+let newUsers = ++usersCounter;</br>
+console.log(newUsers);</br></mark>
+
+</p>
+          <p><span>// Варіант №5</span></br>
+console.log(!false && 11 || 18 && !'');</br>
+</br> <mark>не вірно, поверне значення 11, тому що у перших дужках оба оператора будут мати значення true, тому виконання операції припиняється</mark></p>
+          <p><span>// Варіант №6</span></br>
+let nameOne = 0;</br>
+console.log(nameOne ?? "Без имени");</br></br> <mark>поверне значення 0, так як 0- не null / undefined</mark>
+
+</p>
+        </article>
+        <article>
+          <h2>Домашка JS (IF ELSE)</h2>
+          <p>
+            <span>// Варіант №1</span></br> if (1 === "1") {</br>
+            console.log("Истина!");</br>
+            } else {</br>
+            console.log("Ложь!");</br></br>
+            <mark>результат "Ложь!", тому що у лапках використан суворий оператор рівності (1 === "1")</mark> 
+          </p>
+          <p>
+            <span>// Варіант №2</span></br> if (5 == "5") {</br>
+            console.log("Истина!");</br>
+            } else {</br>
+            console.log("Ложь!");</br>
+            }</br></br>
+            <mark>результат "Истина!", тому що у лапках використан звичайний оператор рівності (5 == "5")</mark>
+          </p>
+          <p>
+            <span>// Варіант №3</span></br> let message = 92 > "11" && 58 < 100 ? "Истина!" : "Ложь!";</br>
+            console.log(message);</br></br> <mark>результат "Истина!", тому що 92 більше 11, виконання умови далі припиняється і повертає "Истина!"</mark>
+          </p>
+          <p><span>// Варіант №4</span></br>
+if (0) {</br>
+	console.log('Ложь!');</br>
+} else if (" ") {</br>
+	console.log('Истина!');</br>
+}</br></br>
+<mark>результат "Истина!", тому що 0-false, " "-true.</mark>
+</p>
+
+        </article>
+        <article>
+          <h2>Домашка JS (FOR and WHILE)</h2>
+          <p>Виводимо числа від 1 до 5:</br>
+          <mark>(1)</mark>:</br>
+          for (let num = 0; num <= 5; ++num) {</br>
+          console.log(`num= ${num}`);}</br></br>
+          <mark>(2)</mark>:</br>
+          let num = 1;</br>
+          while (num <= 5) {</br>
+          console.log(`num= ${num}`);</br>
+          num++;}</br>
+          <mark>(3)</mark>:</br>
+          let num = 1;</br>
+          do {</br>
+          console.log(`num= ${num}`);</br>
+          num++;</br>
+          } while (num <= 5);</br></br>
+          </p>
+          <p>
+            <span>// Варіант №2</span></br> let num = 8;</br>
+            while (num) {</br>
+            //Последний результат 0, верно?</br>
+            console.log(num);</br>
+            num--; </br></br> <mark>не вірно, останній результат буде (1).</mark>
+          </p>
+          <p>
+            <span>// Варіант №3</span></br> //Задача №3.</br> Переписать на while</br>
+            // for (let num = 0; num < 3; num++) {</br>
+            //   console.log(`Число: ${num}`);</br>
+            // } </br> </br><mark>let num = 1;</br>
+            while (num <= 3) {</br>
+            console.log(`Число: ${num}`);</br>
+            num++;}</mark>
+          </p>
+          <p><span>// Варіант №4</span></br>
+          //Задача №4. Прекратить работу цикла №1 когда size равна 1</br>
+          //Цикл №1</br>
+          for (let num = 0; num < 2; num++) {</br>
+          //Цикл №2</br>
+          for (let size = 0; size < 3; size++) {</br>
+          console.log(size);</br>
+          }</br>
+          </br></br> <mark>//Цикл №1</br>
+          firstFor: for (let num = 0; num < 2; num++) {</br>
+            //Цикл №2</br>
+            for (let size = 0; size < 3; size++) {</br>
+              console.log(size);</br>
+              if (size == 1) {</br>
+                break firstFor;</br>
+              }</br>
+            }</br>
+          }</br></mark>
+          </p>        
+        </article>
+        <article>
+          <h2>Домашка JS (Числа JAVASCRIPT)</h2>
+          <p>
+            <span>// Варіант №1</span></br> // Задача №1. Получить верное значение округления</br>
+            let numOne = Math.round(1.005 * 100) / 100;</br>
+            console.log(numOne); // Выведет 1 что не верно </br></br> <mark>let sourceNum = 1.005 + Number.EPSILON;</br>
+            let numOne = Math.round(sourceNum * 100) / 100;</br>
+            console.log(numOne);</br></mark>
+          </p>
+          <p>
+            <span>// Варіант №2</span></br> // Задача №2. Получить число 135.58 из строки</br>
+            let value = "135.58px"; </br></br> <mark>let value = parseFloat("135.58px");</br>
+            console.log(value);</br></mark>
+          </p>
+          <p>
+            <span>// Варіант №3</span></br> // Задача №3. Посттроить верное условное ветвление</br>
+            let value = 58 + "Фрилансер";</br>
+            if (написать ответ) {</br>
+            console.log('Результат выражения NaN');}</br>
+            </br> <mark>let value = 58 + "Фрилансер";</br>
+            if (isNaN(value)) {</br>
+            console.log("Результат выражения NaN");</br>
+            }</br></br></mark>
+          </p>
+          <p><span>// Варіант №4</span></br>
+            // Задача №4.</br>
+            // Найти максимальное число из 10,58,39,-150,0</br>
+            </br></br> <mark>console.log(Math.max(10, 58, 39, -150, 0));
+            </br></mark>
+          </p>
+          <p><span>// Варіант №5</span></br>
+            // Задача №5.</br>
+            // Округлить число 58.858 до числа 58</br>
+            </br> <mark>let num = 58.858;</br>
+            console.log(Math.floor(num));</br></mark></p>         
+        </article>
+        <article>
+          <h2>Домашка JS (Рядки JAVASCRIPT)</h2>
+          <p>
+            <span>// Варіант №1</span></br> // Задача №1. Верна ли запись?</br>
+            let fls = "фрилансер";</br>
+            let text = 'Привет! Я ${fls}';</br>
+            // Ожидаем получить Привет! Я фрилансер</br>
+            console.log(text);</br> </br> <mark>не вірно, щоб працювало потрібні (``) у рядку- let text = `Привет! Я ${fls}`;</mark>
+          </p>
+          <p>
+            <span>// Варіант №2</span></br> // Задача №2. Получить символ "н" строки:</br>
+            let text = 'фрилансер';</br></br> <mark>let text = "фрилансер";</br>
+            let someSymbol = text[5];</br>
+            console.log(someSymbol);</br></mark>
+          </p>
+          <p>
+            <span>// Варіант №3</span></br> // Задача №3. Верно?</br>
+            let text = 123 + "456";</br>
+            // Ожидаем 579</br>
+            console.log(text);</br> </br> <mark> не вірно, при додаванні String до Number,</br> результат теж буде 
+            String,</br> щоб працювало треба додати (+) до String: let text = 123 + +"456";</mark>
+          </p>
+          <p><span>// Варіант №4</span></br>
+            // Задача №4. Получить строку в верхнем регистре</br>
+            let text = 'фрилансер';</br>
+            </br></br> <mark>let text = "фрилансер";</br>
+            console.log(text.toUpperCase());</br></mark>
+          </p>
+          <p><span>// Варіант №5</span></br>
+            // Задача №5. Получить подстроку "лан" из:</br>
+            let text = 'фрилансер';</br>
+            </br> <mark>let text = "фрилансер";</br>
+            console.log(text.slice(3, 6));</br></br></mark></p>
+          <p><span>// Варіант №6</span></br>
+            let text = "фрилансер";</br>
+            console.log(text.includes("лан", 4));
+            </br></br> <mark>false, щоб було true треба так:</br> console.log(text.includes("лан", 3));</br></mark>
+          </p>
+        </article>
+      </main>
+      <footer class="footer"><h2>FOOTER</h2></footer>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
